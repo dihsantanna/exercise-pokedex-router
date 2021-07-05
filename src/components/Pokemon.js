@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './css/pokemon.css';
 
 class Pokemon extends React.Component {
@@ -12,6 +13,7 @@ class Pokemon extends React.Component {
           <span>{pokeData.name}</span>
           <span>{pokeData.type}</span>
           <span>Average Weight: {pokeData.weight} {pokeData.unity}</span>
+          <span><Link to="/pokemons/">more infos...</Link></span>
         </div>
 
         <img className="image-poke" src={pokeData.src} alt={pokeData.alt}/>
