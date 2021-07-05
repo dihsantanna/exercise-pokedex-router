@@ -95,6 +95,7 @@ class Pokedex extends React.Component {
 				loading
 				? <span>Loading . . .</span>
 				: <Pokemon
+					id={pokeRender[pokeIndex].id}
 					name={pokeRender[pokeIndex].name}
 					type={pokeRender[pokeIndex].type}
 					weight={pokeRender[pokeIndex].averageWeight.value}

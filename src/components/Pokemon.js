@@ -4,19 +4,27 @@ import './css/pokemon.css';
 
 class Pokemon extends React.Component {
   render() {
-    const pokeData = this.props;
+    const {
+      id,
+      name,
+      type,
+      weight,
+      unity,
+      src,
+      alt,
+    } = this.props;
 
     return (
       <div className="poke-contain">
 
         <div className="poke-info">
-          <span>{pokeData.name}</span>
-          <span>{pokeData.type}</span>
-          <span>Average Weight: {pokeData.weight} {pokeData.unity}</span>
-          <span><Link to="/pokemons/">more infos...</Link></span>
+          <span>{name}</span>
+          <span>{type}</span>
+          <span>Average Weight: {weight} {unity}</span>
+          <span><Link to={`/pokemons/${id}`}>more infos...</Link></span>
         </div>
 
-        <img className="image-poke" src={pokeData.src} alt={pokeData.alt}/>
+        <img className="image-poke" src={src} alt={alt}/>
           
       </div>
     )
