@@ -4,7 +4,7 @@ import Pokedex from './pages/Pokedex';
 import Footer from './components/Footer';
 import PokeDetails from './pages/PokeDetails'
 import pokemons from './data';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import './App.css'
 
 class App extends React.Component {
@@ -13,6 +13,11 @@ class App extends React.Component {
       <BrowserRouter>
         <div className="App">
           <Header />
+          <nav className="nav">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/favorites">Favorite Pokemons</Link>
+          </nav>
           <Switch>
             <Route
               path="/pokemons/:pokeId"

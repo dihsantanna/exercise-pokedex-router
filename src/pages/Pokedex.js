@@ -75,8 +75,7 @@ class Pokedex extends React.Component {
 			...state,
 			pokeRender: [...filterPokemon],
 			loading: false,
-		}));
-		this.disabledNextBtn(filterPokemon.length);
+		}), () => this.disabledNextBtn(filterPokemon.length));		
 	};
 
 	componentDidMount() {

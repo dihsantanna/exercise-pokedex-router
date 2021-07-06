@@ -16,3 +16,10 @@ html, body, .root {
   width: 100%;
   min-height: 100%;
 }
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-bottom: 20px;
+}
