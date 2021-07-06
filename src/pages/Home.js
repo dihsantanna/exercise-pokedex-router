@@ -8,10 +8,10 @@ class Home extends React.Component {
     const { pokemons } = this.props;
     return (
       <div className="App">
-          <Header />
-          <Pokedex pokemons={pokemons} />
-          <Footer />
-        </div>
+        <Header />
+        <Pokedex pokemons={pokemons} />
+        <Footer />
+      </div>
     );
   }
 }
