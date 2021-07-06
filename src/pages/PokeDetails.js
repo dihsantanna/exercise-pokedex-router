@@ -45,7 +45,7 @@ class PokeDetails extends React.Component {
             </figure>
           )
         })}
-        
+
       </section>
     );
   }

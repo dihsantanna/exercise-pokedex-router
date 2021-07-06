@@ -2,7 +2,8 @@ import React from 'react';
 import Header from './components/Header'
 import Pokedex from './pages/Pokedex';
 import Footer from './components/Footer';
-import PokeDetails from './pages/PokeDetails'
+import PokeDetails from './pages/PokeDetails';
+import About from './pages/About';
 import pokemons from './data';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import './App.css'
@@ -23,6 +24,7 @@ class App extends React.Component {
               path="/pokemons/:pokeId"
               render={(props) => <PokeDetails {...props} pokemons={pokemons} />}
             />
+            <Route path="/about" component={About} />
             <Route
               path="/"
               render={(props) => <Pokedex {...props} pokemons={pokemons} />}
