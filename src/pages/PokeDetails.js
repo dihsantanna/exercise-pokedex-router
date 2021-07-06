@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../components/Footer';
 
 class PokeDetails extends React.Component {
   render() {
@@ -7,32 +6,47 @@ class PokeDetails extends React.Component {
     const {
       name,
       type,
+      image,
       averageWeight: {
         value,
         measurementUnit,
       },
       foundAt,
       summary,
-    } = pokemons.find((pokemon) => pokemon.id === pokeId);
+    } = pokemons.find((pokemon) => pokemon.id === Number(pokeId.pokeId));
 
     return (
-      <div className="App">
-        <section>
-          <span>{name}</span>
-          <span>{type}</span>
-          <span>{`Average Weight: ${value} ${measurementUnit}`}</span>
+      <section>
+        <div className="poke-contain">
+
+          <div className="poke-info">
+            <span>{name}</span>
+            <span>{type}</span>
+            <span>Average Weight: {value} {measurementUnit}</span>
+          </div>
+
+          <img className="image-poke" src={image} alt={name} />
+
+        </div>
+        <div className="summary">
+
+          <h2>Summary</h2>
           <p>{summary}</p>
-          {foundAt.map((location) => {
-            return (
-              <figure className="location" key={location.location}>
-                <span>{location.location}</span>
-                <img src={location.map} alt={location.location}></img>
-              </figure>
-            )
-          })}
-        </section>
-        <Footer />
-      </div>
+
+        </div>
+
+        <h2>Game Locations of {name}</h2>
+
+        {foundAt.map((location) => {
+          return (
+            <figure className="location" key={location.location}>
+              <img src={location.map} alt={location.location}></img>
+              <p>{location.location}</p>
+            </figure>
+          )
+        })}
+        
+      </section>
     );
   }
 }
