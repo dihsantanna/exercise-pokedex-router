@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header'
-import Home from './pages/Home';
+import Pokedex from './pages/Pokedex';
 import Footer from './components/Footer';
 import PokeDetails from './pages/PokeDetails'
 import pokemons from './data';
@@ -20,7 +20,7 @@ class App extends React.Component {
             />
             <Route
               path="/"
-              render={(props) => <Home {...props} pokemons={pokemons} />}
+              render={(props) => <Pokedex {...props} pokemons={pokemons} />}
             />
           </Switch>
           <Footer />
