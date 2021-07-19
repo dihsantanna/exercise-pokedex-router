@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/about.css';
 
 class About extends React.Component {
   render() {
@@ -13,6 +14,8 @@ class About extends React.Component {
           <br />
           Use our filter to find the Pokémon by type, and find various information about the Pokémon in "more info...".
         </p>
+
+        <img src="http://1.bp.blogspot.com/-1tSyWmNGB-Y/VPNtwgCnTWI/AAAAAAAAAZQ/ERe9_UB0JjY/s1600/Gen_I_Pokedex.png" />
 
       </section>
     );

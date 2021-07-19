@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/pokeDetails.css';
 
 class PokeDetails extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class PokeDetails extends React.Component {
     } = pokemons.find((pokemon) => pokemon.id === Number(pokeId.pokeId));
 
     return (
-      <section>
+      <section className="poke-details">
         <div className="poke-contain">
 
           <div className="poke-info">
@@ -28,6 +29,7 @@ class PokeDetails extends React.Component {
           <img className="image-poke" src={image} alt={name} />
 
         </div>
+
         <div className="summary">
 
           <h2>Summary</h2>
@@ -35,16 +37,18 @@ class PokeDetails extends React.Component {
 
         </div>
 
-        <h2>Game Locations of {name}</h2>
+        <div className="locations">
+          <h2>Game Locations of {name}</h2>
 
-        {foundAt.map((location) => {
-          return (
-            <figure className="location" key={location.location}>
-              <img src={location.map} alt={location.location}></img>
-              <p>{location.location}</p>
-            </figure>
-          )
-        })}
+          {foundAt.map((location) => {
+            return (
+              <figure className="location" key={location.location}>
+                <img src={location.map} alt={location.location}></img>
+                <p>{location.location}</p>
+              </figure>
+            )
+          })}
+        </div>
 
       </section>
     );

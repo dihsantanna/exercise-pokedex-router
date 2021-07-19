@@ -1,0 +1,15 @@
+.not-found {
+  align-items: center;
+  display:flex;
+  flex-direction:column;
+}
+
+.not-found h2 {
+  margin-bottom: 20px;
+}
+
+.not-found img {
+  border-radius: 10px;
+  margin-bottom:20px;
+  width:60%;
+}
