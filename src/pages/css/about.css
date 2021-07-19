@@ -1,0 +1,14 @@
+.about {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.about p {
+  width: 95%;
+}
+
+.about img {
+  margin-top: 20px;;
+  width: 65%;
+}
